@@ -264,8 +264,8 @@ pre {
   }
 
   .logo-link {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .tabs {
@@ -280,6 +280,11 @@ pre {
       vertical-align: middle;
     }
 
+    a.logo-img {
+        display: flex;
+        align-items: center;
+    }
+
     // Remove external link indicator.
     a.logo-img::after {
       display: none;
@@ -290,6 +295,7 @@ pre {
     .social-icons {
       padding: 0;
       display: flex;
+      align-items: center;
       gap: 20px;
     }
   }
@@ -2144,4 +2150,40 @@ div.highlight {
 
 .search-suggestions::-webkit-scrollbar-thumb:hover {
   background-color: $osv-grey-800;
+}
+
+/* Theme toggle button visibility */
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+}
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .icon-dark-mode { display: none; }
+  .icon-light-mode { display: inline-block; }
+}
+html[data-theme="light"] .theme-toggle-btn {
+  color: $osv-text-color;
+  .icon-dark-mode { display: inline-block; }
+  .icon-light-mode { display: none; }
+}
+
+.github-container {
+    width: 36px;
+    display: flex;
+    justify-content: center;
 }
