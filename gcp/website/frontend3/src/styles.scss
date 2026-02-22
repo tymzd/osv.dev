@@ -1,13 +1,48 @@
 @use 'sass:string';
+@use '@material/theme';
+@use '@material/layout-grid/mdc-layout-grid';
+@use '@material/data-table/data-table';
+@use '@material/data-table/data-table-theme';
 
-$osv-background: #292929;
-$osv-text-color: #fff;
+:root {
+  --osv-bg: #292929;
+  --osv-text: #fff;
+  --osv-grey-600: #80868b;
+  --osv-grey-800: #3C4043;
+  --osv-border: #555;
+  --osv-red-300: #ec928e;
+  --osv-cyan-300: #C9F5F7;
+  --osv-code-bg: #202020;
+  --osv-hover-bg: rgba(255, 255, 255, 0.1);
+  --osv-search-bg: rgba(41, 41, 41, 0.95);
+  --osv-search-border: rgba(255, 255, 255, 0.3);
+  --osv-ecosystems-bg: #333333;
+}
+
+:root[data-theme="light"] {
+  --osv-bg: #ffffff;
+  --osv-text: #202020;
+  --osv-grey-600: #5f6368;
+  --osv-grey-800: #f1f3f4;
+  --osv-border: #dadce0;
+  --osv-red-300: #c5221f;
+  --osv-cyan-300: #007b83;
+  --osv-code-bg: #dddddd;
+  --osv-hover-bg: rgba(0, 0, 0, 0.05);
+  --osv-search-bg: rgba(255, 255, 255, 0.95);
+  --osv-search-border: rgba(0, 0, 0, 0.2);
+  --osv-ecosystems-bg: #fafafa;
+}
+
+$osv-background: var(--osv-bg);
+$osv-text-color: var(--osv-text);
 $osv-accent-color: #c5221f;
 $osv-accent-color-hover: #c5221fb2;
-$osv-red-300: #ec928e;
-$osv-grey-600: #80868b;
-$osv-grey-800: #3C4043;
-$osv-cyan-300: #C9F5F7;
+$osv-red-300: var(--osv-red-300);
+$osv-grey-600: var(--osv-grey-600);
+$osv-grey-800: var(--osv-grey-800);
+$osv-cyan-300: var(--osv-cyan-300);
+$osv-white: #ffffff;
 $osv-green: #53aa33;
 $osv-yellow: #ffd700;
 $osv-orange: #ffa500;
@@ -20,13 +55,10 @@ $osv-heading-line-height: 70px;
 $osv-heading-line-height-mobile: 50px;
 $osv-mobile-breakpoint: 500px;
 $osv-border-radius-small: 4px;
-$osv-border-color: #555;
+$osv-border-color: var(--osv-border);
+$osv-code-bg: var(--osv-code-bg);
+$osv-ecosystems-bg: var(--osv-ecosystems-bg);
 
-@use '@material/theme' with ($surface: $osv-background,
-);
-@use '@material/layout-grid/mdc-layout-grid';
-@use '@material/data-table/data-table';
-@use '@material/data-table/data-table-theme';
 @include data-table.core-styles;
 @include data-table.theme-baseline;
 
@@ -141,6 +173,10 @@ a {
     height: 16px;
     margin-left: 3px;
     vertical-align: middle;
+
+    html[data-theme="light"] & {
+      filter: invert(1);
+    }
   }
 }
 
@@ -158,7 +194,7 @@ pre {
   padding: 0 16px;
   height: 36px;
   background: $osv-accent-color;
-  color: $osv-text-color;
+  color: $osv-white;
   border-radius: $osv-border-radius-small;
   align-items: center;
   text-decoration: none;
@@ -257,6 +293,12 @@ pre {
 
     // Keep logo visible.
     z-index: 3;
+
+    .logo-img-dark { display: none; }
+    html[data-theme="light"] & {
+      .logo-img-light { display: none; }
+      .logo-img-dark { display: block; }
+    }
   }
 
   #hamburger-checkbox {
@@ -266,6 +308,10 @@ pre {
   .logo-link {
     width: 20px;
     height: 20px;
+
+    html[data-theme="light"] & {
+      filter: invert(1);
+    }
   }
 
   .tabs {
@@ -278,6 +324,10 @@ pre {
       height: 16px;
       margin-left: 3px;
       vertical-align: middle;
+
+      html[data-theme="light"] & {
+        filter: invert(1);
+      }
     }
 
     a.logo-img {
@@ -1348,7 +1398,7 @@ osv-tabs.vulnerability-packages[affordance="collapse"] {
 
     .ecosystem-counts-wrapper {
       position: relative;
-      background: #333;
+      background: $osv-ecosystems-bg;
       margin-top: 20px;
       height: $ecosystem-count-wrapper-height;
 
@@ -1621,7 +1671,7 @@ osv-tabs.vulnerability-packages[affordance="collapse"] {
 
   .code-card {
     position: relative;
-    background: #202020;
+    background: $osv-code-bg;
     border-radius: 10px;
     padding: 32px;
     margin-bottom: 32px;
@@ -1717,7 +1767,7 @@ osv-tabs.vulnerability-packages[affordance="collapse"] {
 
 pre.big-code-block {
   padding: 10px;
-  background-color: #202020;
+  background-color: $osv-code-bg;
   overflow-x: scroll;
   width: 100%;
 }
@@ -1954,7 +2004,7 @@ div.highlight {
 .search-toggle {
   background: transparent;
   border: none;
-  color: white;
+  color: $osv-text-color;
   cursor: pointer;
   padding: 8px;
   display: flex;
@@ -1964,12 +2014,12 @@ div.highlight {
   border-radius: 50%;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--osv-hover-bg);
   }
 
   &:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--osv-hover-bg);
   }
 
   &.active {
@@ -1993,12 +2043,12 @@ div.highlight {
   width: 0;
   overflow: hidden;
   transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  background: rgba(41, 41, 41, 0.95);
+  background: var(--osv-search-bg);
   border-radius: 24px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--osv-search-border);
   box-sizing: border-box;
 
   &.active {
@@ -2160,7 +2210,7 @@ div.highlight {
 .theme-toggle-btn {
   background: transparent;
   border: none;
-  color: white;
+  color: $osv-text-color;
   cursor: pointer;
   padding: 8px;
   display: flex;
@@ -2170,7 +2220,7 @@ div.highlight {
   border-radius: 50%;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--osv-hover-bg);
   }
 
   .icon-dark-mode { display: none; }
