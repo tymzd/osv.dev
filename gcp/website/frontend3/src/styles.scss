@@ -1743,7 +1743,7 @@ osv-tabs.vulnerability-packages[affordance="collapse"] {
   .code-card {
     position: relative;
     background: $osv-code-bg;
-    border-radius: 10px;
+    border-radius: $osv-border-radius-small;
     padding: 32px;
     margin-bottom: 32px;
 
@@ -1845,10 +1845,7 @@ osv-tabs.vulnerability-packages[affordance="collapse"] {
 }
 
 pre.big-code-block {
-  padding: 10px;
-  background-color: $osv-code-bg;
-  overflow-x: scroll;
-  width: 100%;
+  border-radius: $osv-border-radius-small;
 }
 
 // Hugo highlighted code blocks
@@ -2339,7 +2336,7 @@ html[data-theme="light"] .theme-toggle-btn {
   .hl { background-color:#363636 }
   .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868 }
   .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868 }
-  .line { display:flex; }
+  .line { }
   .k { color:#6ab825;font-weight:bold }
   .kc { color:#6ab825;font-weight:bold }
   .kd { color:#6ab825;font-weight:bold }
@@ -2418,7 +2415,7 @@ html[data-theme="light"] .theme-toggle-btn {
   .hl { background-color: #bcc0cc; }
   .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: #8c8fa1; }
   .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: #8c8fa1; }
-  .line { display: flex; }
+  .line { }
   .k { color: #8839ef; }
   .kc { color: #fe640b; }
   .kd { color: #d20f39; }

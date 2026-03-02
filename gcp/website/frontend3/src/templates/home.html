@@ -85,46 +85,46 @@
       </p>
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell--span-12">
-          <pre class="big-code-block"><code>{
-  "schema_version": "1.7.4",
-  "id": "GHSA-c3g4-w6cv-6v7h",
-  "modified": "2022-04-01T13:56:42Z",
-  "published": "2022-04-01T13:56:42Z",
-  "aliases": [ "CVE-2022-27651" ],
-  "summary": "Non-empty default inheritable capabilities for linux container in Buildah",
-  "details": "A bug was found in Buildah where containers were created ...",
-  "affected": [
-    {
-      "package": {
-        "ecosystem": "Go",
-        "name": "github.com/containers/buildah"
-      },
-      "ranges": [
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "1.25.0"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "references": [
-    {
-      "type": "WEB",
-      "url": "https://github.com/containers/buildah/commit/..."
-    },
-    {
-      "type": "PACKAGE",
-      "url": "https://github.com/containers/buildah"
-    }
-  ]
-}</code></pre>
+          <pre class="big-code-block chroma"><code class="language-json"><span class="line"><span>{</span></span>
+<span class="line"><span>  <span class="nt">"schema_version"</span>: <span class="s2">"1.7.4"</span>,</span></span>
+<span class="line"><span>  <span class="nt">"id"</span>: <span class="s2">"GHSA-c3g4-w6cv-6v7h"</span>,</span></span>
+<span class="line"><span>  <span class="nt">"modified"</span>: <span class="s2">"2022-04-01T13:56:42Z"</span>,</span></span>
+<span class="line"><span>  <span class="nt">"published"</span>: <span class="s2">"2022-04-01T13:56:42Z"</span>,</span></span>
+<span class="line"><span>  <span class="nt">"aliases"</span>: [ <span class="s2">"CVE-2022-27651"</span> ],</span></span>
+<span class="line"><span>  <span class="nt">"summary"</span>: <span class="s2">"Non-empty default inheritable capabilities for linux container in Buildah"</span>,</span></span>
+<span class="line"><span>  <span class="nt">"details"</span>: <span class="s2">"A bug was found in Buildah where containers were created ..."</span>,</span></span>
+<span class="line"><span>  <span class="nt">"affected"</span>: [</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      <span class="nt">"package"</span>: {</span></span>
+<span class="line"><span>        <span class="nt">"ecosystem"</span>: <span class="s2">"Go"</span>,</span></span>
+<span class="line"><span>        <span class="nt">"name"</span>: <span class="s2">"github.com/containers/buildah"</span></span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      <span class="nt">"ranges"</span>: [</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>          <span class="nt">"type"</span>: <span class="s2">"SEMVER"</span>,</span></span>
+<span class="line"><span>          <span class="nt">"events"</span>: [</span></span>
+<span class="line"><span>            {</span></span>
+<span class="line"><span>              <span class="nt">"introduced"</span>: <span class="s2">"0"</span></span></span>
+<span class="line"><span>            },</span></span>
+<span class="line"><span>            {</span></span>
+<span class="line"><span>              <span class="nt">"fixed"</span>: <span class="s2">"1.25.0"</span></span></span>
+<span class="line"><span>            }</span></span>
+<span class="line"><span>          ]</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>      ]</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  ],</span></span>
+<span class="line"><span>  <span class="nt">"references"</span>: [</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      <span class="nt">"type"</span>: <span class="s2">"WEB"</span>,</span></span>
+<span class="line"><span>      <span class="nt">"url"</span>: <span class="s2">"https://github.com/containers/buildah/commit/..."</span></span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      <span class="nt">"type"</span>: <span class="s2">"PACKAGE"</span>,</span></span>
+<span class="line"><span>      <span class="nt">"url"</span>: <span class="s2">"https://github.com/containers/buildah"</span></span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  ]</span></span>
+<span class="line">}</span></code></pre>
         </div>
       </div>
       <div class="cta">
@@ -159,9 +159,9 @@
       <div class="code-card-container mdc-layout-grid__inner">
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Query by commit hash</h3>
-          <pre class="code-card-content" id="example-commit-hash">curl -d \
-  '{"commit": "6879efc2c1596d11a6a6ad296f80063b558d5e0f"}' \
-  "https://api.osv.dev/v1/query"</pre>
+<pre class="code-card-content chroma" id="example-commit-hash"><span class="line"><span><span class="nb">curl</span> <span class="na">-d</span> \</span></span>
+<span class="line"><span>  <span class="s1">'{"commit": "6879efc2c1596d11a6a6ad296f80063b558d5e0f"}'</span> \</span></span>
+<span class="line"><span>  <span class="s2">"https://api.osv.dev/v1/query"</span></span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-commit-hash">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -170,10 +170,10 @@
         </div>
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Query by version number</h3>
-          <pre class="code-card-content" id="example-version-number">curl -d \
-  '{"version": "2.4.1",
-    "package": {"name": "jinja2", "ecosystem": "PyPI"}}' \
-  "https://api.osv.dev/v1/query"</pre>
+<pre class="code-card-content chroma" id="example-version-number"><span class="line"><span><span class="nb">curl</span> <span class="na">-d</span> \</span></span>
+<span class="line"><span>  <span class="s1">'{"version": "2.4.1",</span></span>
+<span class="line"><span><span class="s1">    "package": {"name": "jinja2", "ecosystem": "PyPI"}}'</span> \</span></span>
+<span class="line"><span>  <span class="s2">"https://api.osv.dev/v1/query"</span></span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-version-number">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -195,9 +195,7 @@
         <div class="mobile-spacer mdc-layout-grid__cell--span-3"></div>
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Install OSV&#8209;Scanner</h3>
-          <pre class="code-card-content" id="example-scanner-install">
-go install github.com/google/osv-scanner/v2/cmd/osv-scanner@v2
-          </pre>
+<pre class="code-card-content chroma" id="example-scanner-install"><span class="line"><span><span class="nb">go</span> <span class="k">install</span> github.com/google/osv-scanner/v2/cmd/osv-scanner@v2</span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-scanner-install">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -207,10 +205,8 @@ go install github.com/google/osv-scanner/v2/cmd/osv-scanner@v2
         <div class="mobile-spacer mdc-layout-grid__cell--span-3"></div>
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Scan SBOM or Lockfiles</h3>
-          <pre class="code-card-content" id="example-sbom-scan">
-osv-scanner --sbom=cycloned-or-spdx-sbom.json
-osv-scanner --lockfile=package-lock.json
-          </pre>
+<pre class="code-card-content chroma" id="example-sbom-scan"><span class="line"><span><span class="nb">osv-scanner</span> <span class="na">--sbom</span>=cycloned-or-spdx-sbom.json</span></span>
+<span class="line"><span><span class="nb">osv-scanner</span> <span class="na">--lockfile</span>=package-lock.json</span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-sbom-scan">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -219,9 +215,7 @@ osv-scanner --lockfile=package-lock.json
         </div>
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Scan directory recursively</h3>
-          <pre class="code-card-content" id="example-dir-scan">
-osv-scanner -r path/to/your/project
-          </pre>
+<pre class="code-card-content chroma" id="example-dir-scan"><span class="line"><span><span class="nb">osv-scanner</span> <span class="na">-r</span> path/to/your/project</span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-dir-scan">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -241,10 +235,14 @@ osv-scanner -r path/to/your/project
       <div class="code-card-container mdc-layout-grid__inner">
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Guided Remediation (basic)</h3>
-          <pre class="code-card-content" id="example-guided-remediation-basic">
-osv-scanner fix --non-interactive --strategy=in-place -L path/to/package-lock.json
-osv-scanner fix --non-interactive --strategy=relock -M path/to/package.json -L path/to/package-lock.json
-          </pre>
+<pre class="code-card-content chroma" id="example-guided-remediation-basic"><span class="line"><span><span class="nb">osv-scanner</span> <span class="k">fix</span> <span class="na">--non-interactive</span> \</span></span>
+<span class="line"><span>  <span class="na">--strategy</span>=in-place \</span></span>
+<span class="line"><span>  <span class="na">-L</span> path/to/package-lock.json</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span><span class="nb">osv-scanner</span> <span class="k">fix</span> <span class="na">--non-interactive</span> \</span></span>
+<span class="line"><span>  <span class="na">--strategy</span>=relock \</span></span>
+<span class="line"><span>  <span class="na">-M</span> path/to/package.json \</span></span>
+<span class="line"><span>  <span class="na">-L</span> path/to/package-lock.json</span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-guided-remediation-basic">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -253,9 +251,7 @@ osv-scanner fix --non-interactive --strategy=relock -M path/to/package.json -L p
         </div>
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Guided Remediation (interactive)</h3>
-          <pre class="code-card-content" id="example-guided-remediation-advanced">
-osv-scanner fix -M path/to/package.json -L path/to/package-lock.json
-          </pre>
+<pre class="code-card-content chroma" id="example-guided-remediation-advanced"><span class="line"><span><span class="nb">osv-scanner</span> <span class="k">fix</span> <span class="na">-M</span> path/to/package.json <span class="na">-L</span> path/to/package-lock.json</span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-guided-remediation-advanced">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
@@ -285,9 +281,7 @@ osv-scanner fix -M path/to/package.json -L path/to/package-lock.json
         <div class="mobile-spacer mdc-layout-grid__cell--span-3"></div>
         <div class="code-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-tablet">
           <h3 class="code-card-title">Scan container image</h3>
-          <pre class="code-card-content" id="example-container-scan-serve">
-osv-scanner scan image --serve alpine:3.12
-          </pre>
+<pre class="code-card-content chroma" id="example-container-scan-serve"><span class="line"><span><span class="nb">osv-scanner</span> <span class="k">scan</span> <span class="k">image</span> <span class="na">--serve</span> alpine:3.12</span></span></pre>
           <clipboard-copy class="code-card-copy" for="example-container-scan-serve">
             <md-icon-button class="icon">
               <md-icon>content_copy</md-icon>
